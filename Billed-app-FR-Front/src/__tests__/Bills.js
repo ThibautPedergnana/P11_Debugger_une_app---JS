@@ -38,6 +38,7 @@ describe("Given I am connected as an employee", () => {
       await waitFor(() => screen.getByTestId("icon-window"));
       const windowIcon = screen.getByTestId("icon-window");
 
+      // Check if icon is active
       expect(windowIcon.classList).toContain("active-icon");
     });
 
@@ -200,6 +201,7 @@ describe("Given I am connected as an employee", () => {
         mockStore.bills.mockImplementationOnce(() => {
           return {
             list: () => {
+              // Reject handle error in promise
               return Promise.reject(new Error("Erreur 404"));
             },
           };
@@ -230,6 +232,7 @@ describe("Given I am connected as an employee", () => {
         mockStore.bills.mockImplementationOnce(() => {
           return {
             list: () => {
+              // Reject handle error in promise
               return Promise.reject(new Error("Erreur 500"));
             },
           };

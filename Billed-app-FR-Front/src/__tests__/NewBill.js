@@ -39,7 +39,7 @@ describe("Given I am connected as an employee", () => {
     });
   });
 
-  describe("When I fill the form ", () => {
+  describe("When I fill the form", () => {
     let newBill;
 
     beforeEach(() => {

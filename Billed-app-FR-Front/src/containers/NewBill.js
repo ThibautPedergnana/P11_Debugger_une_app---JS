@@ -30,7 +30,7 @@ export default class NewBill {
     const authorizedType = ["image/jpeg", "image/jpg", "image/png"];
 
     if (!authorizedType.includes(file.type)) {
-      console.error("wrong extension");
+      console.error("wrong type");
       this.document.querySelector(`input[data-testid="file"]`).value = "";
       return;
     }
